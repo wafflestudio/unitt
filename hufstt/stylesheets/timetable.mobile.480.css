@@ -1,0 +1,29 @@
+.search-result-table .course-title {width:auto !important;}
+.search-result-table .credit {width:auto !important;}
+.search-result-table .class-time {width:auto !important;}
+.search-result-table .instructor {width:auto !important;}
+
+.search-result-table .department {display:none !important;}
+.search-result-table .course-number {display:none !important;}
+.search-result-table .lecture-number {display:none !important;}
+.search-result-table .academic-year {display:none !important;}
+.search-result-table .enrollment {display:none !important;}
+.search-result-table .classification {display:none !important;}
+.search-result-table .remark {display:none !important;}
+.search-result-table .quota {display:none !important;}
+
+.search-result-table th {font-size:8pt !important;line-height:130% !important;}
+.search-result-table td {font-size:8pt !important;line-height:130% !important;}
+
+#timetable thead th {height:20px !important;font-size:8pt;}
+#timetable tbody th {width:35px !important;}
+#timetable tbody td {height:16px !important;}
+#timetable .period {font-size:8pt !important;}
+#timetable .time {display:none !important;}
+#timetable .sat {display:none !important;}
+.timecell {font-size:8pt !important;line-height:120% !important;}
+
+.search-filter-separator {clear:both;}
+.search-filter-container {float:none !important;height:auto !important;margin-bottom:5px !important;}
+
+#course_detail_wrapper {display:none !important;}

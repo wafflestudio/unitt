@@ -1,0 +1,92 @@
+* {font-family:"Arial";}
+body {padding-top:45px;}
+
+.selected-semester-li {background-color:#ccf;}
+
+#facebook_like_li {padding-top:9px;}
+
+#search_form {margin-bottom:0;}
+#search_type {float:left;margin-right:3px;}
+.search-result-table.table th {text-align:center;}
+.search-result-table.table td {vertical-align:middle;font-size:9pt;}
+.search-result-table .sector {width:40px;text-align:center;}
+.search-result-table .classification {width:30px;text-align:center;}
+.search-result-table .department {min-width:40px;max-width:80px;text-align:center;}
+.search-result-table .academic-year {width:40px;text-align:center;}
+.search-result-table .course-number {width:65px;text-align:center;}
+.search-result-table .lecture-number {width:30px;text-align:center;}
+.search-result-table .credit {width:30px;text-align:center;}
+.search-result-table .course-title {}
+.search-result-table .quota {width:30px;text-align:center;}
+.search-result-table .enrollment {width:30px;text-align:center;}
+.search-result-table .class-time {width:70px;text-align:center;}
+.search-result-table .instructor {width:60px;text-align:center;}
+.search-result-table .location {width:70px;text-align:center;}
+.search-result-table .essential-major {width:40px;text-align:center;}
+.search-result-table .team-teaching {width:40px;text-align:center;}
+.search-result-table .cyber {width:40px;text-align:center;}
+.search-result-table .native {width:40px;text-align:center;}
+.search-result-table th.remark {text-align:center;}
+.search-result-table tbody tr {cursor:pointer;}
+#lectures_content {height:250px;overflow:scroll;overflow-x:hidden;border:1px solid #ccc;}
+#timetable_container {margin-top:10px;}
+
+#search_result_table tr.selected {background-color:#ccf}
+#my_courses_table tr.selected {background-color:#ccf}
+#timetable {width:100%;}
+#timetable th, #timetable td{text-align:center;vertical-align:middle;border:1px solid #ddd;line-height:100%;padding:0;}
+#timetable thead th {height:30px;}
+#timetable tbody th {width:100px;}
+#timetable tbody td {height:18px;}
+#timetable .period {font-size:1.2em;}
+#timetable .time {font-size:0.8em;}
+.timecell-container {position:absolute;z-index:100;}
+.timecell {position:relative;border:3px solid #ccc;text-align:center;cursor:pointer;}
+#customcell_container {position:absolute;z-index:100;}
+#customcell {position:relative;border:3px dotted #f00;text-align:center;z-index:200;}
+
+#footer {margin:20px 0 10px 0;padding:10px;text-align:center;border-top:1px solid #ddd;}
+#footer p {font-size:9pt;font-family:"Arial";margin:0;padding:0;margin:3px;}
+#footer a:visited {color:#c53535;text-decoration:none;}
+#footer a:link {color:#c53535;text-decoration:none;}
+#footer a:hover {color:#c53535;text-decoration:none;}
+
+#search_filter {margin-top:10px;}
+#search_filter_footer {clear:both;}
+.search-filter-container {float:left;margin-right:20px;height:30px;}
+.search-filter-container span.header {font-weight:bold;font-size:9pt;color:#000;cursor:pointer;}
+.search-filter-container span.label {cursor:pointer;}
+
+#export_wrapper {}
+#export_wrapper h3 {font-size:12pt;padding:3px;}
+#export_image_wrapper {padding:3px;}
+#export_button {padding:3px;}
+#export_button p {color:red;margin-top:5px;}
+
+#facebook_message_wrapper {margin-top:5px;}
+#facebook_message_wrapper #facebook_message {width:250px;}
+
+#init_loading_modal {background-color:black;}
+#init_loading_modal #init_loading_image{margin-top:20px;text-align:center;}
+#init_loading_modal p{margin-top:15px;text-align:center;}
+#facebook_loading_modal {background-color:black;}
+#facebook_loading_modal #facebook_loading_image{margin-top:20px;text-align:center;}
+#facebook_loading_modal p{margin-top:15px;text-align:center;}
+.no-title .ui-widget-header {display:none;}
+.ui-widget-header {font-family:"Arial" !important;font-weight:normal !important;}
+
+/* facebook social plugin */
+.fb-comments, .fb-comments iframe[style] {width: 100% !important;}
+.fb-comments, .fb-comments span, .fb-comments.fb_iframe_widget span iframe {width: 100% !important;}
+.fb-comments, .fb-comments.fb_iframe_widget iframe[style], .fb-comments.fb_iframe_widget span[style] {width: 100% !important;}
+
+#course_detail_wrapper {border:1px dotted #aaa;width:270px;position:fixed;z-index:10000;background-color:white;}
+#course_detail_wrapper div.course-title {background-color:#eee;height:25px;padding:1px 5px 1px 5px;cursor:move;}
+#course_detail_wrapper #course_detail_title {font-size:10pt;float:left;}
+#course_detail {padding:3px;border-bottom:1px solid #eee;margin-bottom:5px;clear:both;}
+#course_detail_table {width:100%;}
+#course_detail_table th {text-align:center;padding:3px;width:65px;}
+#course_detail_table td {text-align:left;padding:3px;}
+#course_detail_buttons {text-align:center;padding:5px;}
+#course_detail_contract {background-image:url("/images/arrow_contract.png");height:24px;width:24px;float:right;cursor:pointer;}
+#course_detail_expand {background-image:url("/images/arrow_expand.png");height:24px;width:24px;float:right;cursor:pointer;}

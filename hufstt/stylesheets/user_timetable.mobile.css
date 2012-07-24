@@ -1,0 +1,5 @@
+#timetable .period {font-size:8pt !important;}
+#timetable .time {font-size:8pt !important;}
+.timecell {font-size:8pt !important;line-height:100% !important;}
+#timetable tbody th {width:40px !important;}
+body {font-size:9pt !important;}

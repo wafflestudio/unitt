@@ -1,0 +1,13 @@
+.search-result-table .course-number {width:auto !important;}
+.search-result-table .lecture-number {width:auto !important;}
+.search-result-table .course-title {width:auto !important;min-width:40px !important;}
+.search-result-table .classification {width:auto !important;}
+.search-result-table .academic-year {width:auto !important;}
+.search-result-table .credit {width:auto !important;}
+.search-result-table .class-time {width:auto !important;}
+.search-result-table .location {width:auto !important;}
+.search-result-table .instructor {width:auto !important;min-width:40px;}
+.search-result-table .quota {width:auto !important;}
+.search-result-table .enrollment {width:auto !important;}
+.search-result-table .remark {width:auto !important;}
+.search-result-table .department {width:auto !important;}
