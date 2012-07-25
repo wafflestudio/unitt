@@ -484,7 +484,7 @@ $(function(){
 	//교과목명
 	$('#stype_course_title').click(function(){
 		$('#stype_dropdown_label').text("교과목명");
-		$('#search_query_text').attr('placeholder', "예) ");
+		$('#search_query_text').attr('placeholder', "예) 경원");
 		search_type = "course_title";
 		$('#search_query_text').focus().val("");
 	});
