@@ -171,10 +171,6 @@ function handler (req, res) { //http server handler
 	var user_agent = req.headers['user-agent'];
 	var not_support = (/msie 6.0/i.test(user_agent)) || (/msie 7.0/i.test(user_agent));// || (/msie 8.0/i.test(user_agent));
 
-	//for test
-	var timetable_header = fs.readFileSync(__dirname + "/timetable_header.htm");
-	var timetable_footer = fs.readFileSync(__dirname + "/timetable_footer.htm");
-
 	//supporting browser
 	if (uri == "/"){
 		//not supporting browser
