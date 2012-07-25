@@ -530,7 +530,7 @@ function upload_timetable_to_facebook(options, socket)
 			socket.emit('facebook_publish_complete', {data:{error:"file save error"}});
 			console.log(err);
 		}else{
-			var target_url = 'https://graph.facebook.com/me/photos?message='+encodeURI(message)+'&access_token=' + access_token;
+			var target_url = 'https://graph.facebook.com/me/photos?message='+encodeURIComponent(message)+'&access_token=' + access_token;
 			restler.post(target_url, {
 				multipart: true,
 				encoding:"utf8",
