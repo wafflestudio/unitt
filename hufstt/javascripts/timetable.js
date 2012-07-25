@@ -1142,7 +1142,7 @@ function refresh_my_courses_table()
 		$('<td></td>').addClass('instructor').appendTo(row).text(lecture.instructor);
 		$('<td></td>').addClass('quota').appendTo(row).text(lecture.quota);
 		$('<td></td>').addClass('enrollment').appendTo(row).text(lecture.enrollment);
-		$('<td></td>').addClass('features').appendTo(row).text(s(lecture.essential_major) + " " + s(lecture.team_teaching) + " " + s(lecture.cyber) + " " + s(lecture.native));
+		$('<td></td>').addClass('features').appendTo(row).text(s(lecture.essential_major) + " " + s(lecture.team_teaching) + " " + s(lecture.cyber) + " " + s(lecture['native']));
 		$('<td></td>').addClass('remark').appendTo(row).text(lecture.remark);
 
 		row.appendTo($('#my_courses_table tbody'));
@@ -1196,7 +1196,7 @@ function set_result_table(data)
 		if (lecture.essential_major) features.push(lecture.essential_major);
 		if (lecture.team_teaching) features.push(lecture.team_teaching);
 		if (lecture.cyber) features.push(lecture.cyber);
-		if (lecture.native) features.push(lecture.native);
+		if (lecture['native']) features.push(lecture['native']);
 		$('<td></td>').addClass('features').appendTo(row).text(features.join(', '));
 		$('<td></td>').addClass('remark').appendTo(row).text(lecture.remark);
 
