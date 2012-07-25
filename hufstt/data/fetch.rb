@@ -28,12 +28,25 @@ $semester_map = {
 }
 
 def get_htm(options)
-	uri = URI.parse(URI.escape("http://webs.hufs.ac.kr:8989/jsp/HUFS/stu1/stu1_c0_a0_d2.jsp?type=&org_sect=#{options[:sector]}&ledg_year=#{$year}&ledg_sessn=#{$semester_map[$semester]}&campus_sect=#{options[:campus]}&gubun=#{options[:gubun]}&crs_strct_cd=#{options[:major]}&compt_fld_cd=#{options[:liberal]}"))
-	html_filename_prefix = "#{Dir.getwd()}/htm/#{$year}_#{$semester}_"
-	filename = html_filename_prefix + options[:filename] + ".htm"
-	puts filename
-	str = Net::HTTP.get(uri).force_encoding("EUC-KR").encode("UTF-8")
-	open(filename, "w") {|file|	file.puts str}
+	while true
+		error = false
+		begin
+			uri = URI.parse(URI.escape("http://webs.hufs.ac.kr:8989/jsp/HUFS/stu1/stu1_c0_a0_d2.jsp?type=&org_sect=#{options[:sector]}&ledg_year=#{$year}&ledg_sessn=#{$semester_map[$semester]}&campus_sect=#{options[:campus]}&gubun=#{options[:gubun]}&crs_strct_cd=#{options[:major]}&compt_fld_cd=#{options[:liberal]}"))
+			html_filename_prefix = "#{Dir.getwd()}/htm/#{$year}_#{$semester}_"
+			filename = html_filename_prefix + options[:filename] + ".htm"
+			puts filename
+			str = Net::HTTP.get(uri).force_encoding("EUC-KR").encode("UTF-8")
+			open(filename, "w") {|file|	file.puts str}
+		rescue
+			puts "error"
+			error = true
+		end
+
+		if !error then
+			break
+		end
+	end
+
 	return str
 end
 
@@ -47,7 +60,6 @@ puts "Fetching htm files...\n"
 # 개설영역 ; 학년 ; 학수번호 ; 교과목명 ; 학점 ; 시간 ; 담당교수 ; 강의시간(강의실) ; 정원/현원 ; 전필 ; 팀티칭 ; 사이버 ; 원어강의 ; 비고
 #
 #학부 ; 서울캠퍼스 ; 전공
-=begin
 get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"AAQ01_H1",:filename => "undergraduate_seoul_major_EU") #EU전공(서울)
 get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"ALA_H1",:filename => "undergraduate_seoul_major_business_department") #경영학부(서울)
 get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"ALAA1_H1",:filename => "undergraduate_seoul_major_business") #경영학전공(서울)
@@ -249,7 +261,6 @@ get_htm(:sector => "T", :gubun => "1", :major => "TB_H1", :filename => "TESOLedu
 get_htm(:sector => "T", :gubun => "1", :major => "TBAB1_H1", :filename => "TESOLeducation_seoul_common_children_weekend") #어린이 TESOL(주말반)(서울)
 get_htm(:sector => "T", :gubun => "1", :major => "TBAA1_H1", :filename => "TESOLeducation_seoul_common_children_night") #어린이 TESOL(주중야간반)(서울)
 get_htm(:sector => "T", :gubun => "1", :major => "TBAC1_H1", :filename => "TESOLeducation_seoul_common_children_morning") #어린이 TESOL(주중오전반)(서울)
-=end
 
 
 puts "Fetching htm files is completed!\n"
@@ -278,7 +289,8 @@ def get_class_time_location(str)
 	arr.each_with_index do |x, i|
 		if i.even? 
 			#x : 월 1 2 3 수 1 2 3
-			x2 = x.gsub(/월/, '월;').gsub(/화/, '화;').gsub(/수/, '수;').gsub(/목/, '목;').gsub(/금/, '금;').gsub(/토/, '토;').gsub(/일/, '일;').split(";")
+			x2 = x.gsub(/월/, ';월;').gsub(/화/, ';화;').gsub(/수/, ';수;').gsub(/목/, ';목;').gsub(/금/, ';금;').gsub(/토/, ';토;').gsub(/일/, ';일;').split(";")
+			x2.delete_at(0)
 			x2.each_with_index do |y, j|
 				if j.odd?
 					#y : 1 2 3
@@ -594,7 +606,7 @@ open(txt_filename, "w") do |file|
 			campus = get_campus(htmfile)
 			department = get_department(htmfile)
 			classification = remove_whitespace(td[1].text)
-			academic_year = td[2].text
+			academic_year = (remove_whitespace(td[2].text).empty? and sector_char != 'A') ? "대학원" : "#{remove_whitespace(td[2].text)}학년"
 			course_number = td[3].text
 			course_title = td[5].text
 			credit = td[6].text

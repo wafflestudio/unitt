@@ -156,7 +156,7 @@ function load_data(year, semester)
 	});
 }
 
-var port = process.env.PORT || 3784;
+var port = process.env.PORT || 3785;
 app.listen(port);
 console.log("Listening on " + port);
 
@@ -263,7 +263,7 @@ function filter_check(lecture, filter)
 			if (academic_year == "2" && lecture.academic_year == "2학년") result = true;
 			if (academic_year == "3" && lecture.academic_year == "3학년") result = true;
 			if (academic_year == "4" && (lecture.academic_year == "4학년" || lecture.academic_year == "5학년")) result = true;
-			if (academic_year == "5" && (lecture.academic_year == "석사" || lecture.academic_year == "박사" || lecture.academic_year == "석박사")) result = true;
+			if (academic_year == "5" && lecture.academic_year == "대학원") result = true;
 		}
 		if (!result) return false;
 	}
@@ -281,20 +281,20 @@ function filter_check(lecture, filter)
 		if (!result) return false;
 	}
 	//학문의기초, 핵심교양, 기타는 OR 연산
-	if (!filter.basics && !filter.core && !filter.etc) return true;
+	if (!filter.practical_foreign_language && !filter.liberal_arts && !filter.etc) return true;
 	var result = false;
-	//학문의 기초
-	if (filter.basics){
-		for (var i=0;i<filter.basics.length;i++){
-			var basics = filter.basics[i];
-			if (basics == lecture.category) result = true;
+	//실용외국어
+	if (filter.practical_foreign_language){
+		for (var i=0;i<filter.practical_foreign_language.length;i++){
+			var practical = filter.practical_foreign_language[i];
+			if (practical == lecture.classification) result = true;
 		}
 	}
-	//핵심교양
-	if (filter.core){
-		for (var i=0;i<filter.core.length;i++){
-			var core = filter.core[i];
-			if (core == lecture.category) result = true;
+	//교양과목
+	if (filter.liberal_arts){
+		for (var i=0;i<filter.liberal_arts.length;i++){
+			var liberal_arts = filter.liberal_arts[i];
+			if (liberal_arts == lecture.classification) result = true;
 		}
 	}
 	//기타
@@ -302,8 +302,6 @@ function filter_check(lecture, filter)
 		for (var i=0;i<filter.etc.length;i++){
 			var etc = filter.etc[i];
 			if (etc == "teaching" && lecture.classification == "교직") result = true;
-			if (etc == "exercise" && lecture.category == "normal_exercise") result = true;
-			if (etc == "etc" && lecture.category != "normal_exercise" && s(lecture.category).indexOf('normal') != -1) result = true;
 		}
 	}
 	return result;

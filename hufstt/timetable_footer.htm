@@ -140,37 +140,38 @@
 								<li><a href="#" id="stype_department">개설학과로 검색</a></li>
 								<li><a href="#" id="stype_class_time">수업교시로 검색</a></li>
 								<li><a href="#" id="stype_instructor">교수명으로 검색</a></li>
-								<li><a href="#" id="stype_course_number">교과목번호로 검색</a></li>
+								<li><a href="#" id="stype_course_number">학수번호로 검색</a></li>
 							</ul>
 						</div>
-						<input type="text" class="input-medium" id="search_query_text" placeholder="예) 컴개실" />
+						<input type="text" class="input-medium" id="search_query_text" placeholder="예) " />
 						<button type="submit" class="btn">검색</button>
 
 						<!-- 검색필터 버튼 -->
 						<a class="btn" id="search_filter_toggle_button" state="off">검색필터 <span class="caret"></span></a>
 
 						<div id="search_filter" style="display:none;">
-							<div class="search-filter-container" id="filter_basics">
-								<span class="header">학문의 기초</span>
-								<span class="label" value="basics_korean">국어와 작문</span>
-								<span class="label" value="basics_foreign">외국어와 외국문화</span>
-								<span class="label" value="basics_science">기초과학</span>
-								<span class="label" value="basics">학문의 기초</span>
+							<div class="search-filter-container" id="filter_practical_foreign_language">
+								<span class="header">실용외국어</span>
+								<span class="label" value="실외(선)">실용외국어(선택)</span>
+								<span class="label" value="실외(필)">실용외국어(필수)</span>
 							</div>
-							<div class="search-filter-container" id="filter_core">
-								<span class="header">핵심교양</span>
-								<span class="label" value="core_art">문학과 예술</span>
-								<span class="label" value="core_history">역사와 철학</span>
-								<span class="label" value="core_society">사회와 이념</span>
-								<span class="label" value="core_nature">자연의 이해</span>
-								<span class="label" value="core_technology">자연과 기술</span>
-								<span class="label" value="core_biology">생명과 환경</span>
+							<div class="search-filter-container" id="filter_liberal_arts">
+								<span class="header">교양과목</span>
+								<span class="label" value="학습">학습포트폴리오</span>
+								<span class="label" value="기초">기초교양</span>
+								<span class="label" value="세문">세계와문화</span>
+								<span class="label" value="언문예">언어.문학.예술</span>
+								<span class="label" value="사철">역사와철학</span>
+								<span class="label" value="정사">정보와사회</span>
+								<span class="label" value="과기">과학과기술</span>
+								<span class="label" value="건강">건강과레포츠</span>
+								<span class="label" value="특교">특별교양</span>
+								<span class="label" value="한국학">한국학</span>
+								<span class="label" value="군사">군사학</span>
 							</div>
 							<div class="search-filter-container" id="filter_etc">
 								<span class="header">기타</span>
 								<span class="label" value="teaching">교직</span>
-								<span class="label" value="exercise">예체능</span>
-								<span class="label" value="etc">기타교양</span>
 							</div>
 							<div class="search-filter-container" id="filter_academic_year">
 								<span class="header">학년</span>
@@ -212,10 +213,7 @@
 										<th class="instructor">교수</th>
 										<th class="quota">정원</th>
 										<th class="enrollment">현원</th>
-										<th class="essential-major">전필</th>
-										<th class="team-teaching">팀티칭</th>
-										<th class="cyber">사이버</th>
-										<th class="native">원어</th>
+										<th class="features">특징</th>
 										<th class="remark">비고</th>
 									</tr>
 								</thead>
@@ -244,10 +242,7 @@
 										<th class="instructor">교수</th>
 										<th class="quota">정원</th>
 										<th class="enrollment">현원</th>
-										<th class="essential-major">전필</th>
-										<th class="team-teaching">팀티칭</th>
-										<th class="cyber">사이버</th>
-										<th class="native">원어</th>
+										<th class="features">특징</th>
 										<th class="remark">비고</th>
 								</tr>
 							</thead>

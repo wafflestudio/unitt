@@ -484,35 +484,35 @@ $(function(){
 	//교과목명
 	$('#stype_course_title').click(function(){
 		$('#stype_dropdown_label').text("교과목명");
-		$('#search_query_text').attr('placeholder', "예) 컴개실");
+		$('#search_query_text').attr('placeholder', "예) ");
 		search_type = "course_title";
 		$('#search_query_text').focus().val("");
 	});
 	//교수명
 	$('#stype_instructor').click(function(){
 		$('#stype_dropdown_label').text("교수명");
-		$('#search_query_text').attr('placeholder', "예) 홍진호");
+		$('#search_query_text').attr('placeholder', "예) 최영석");
 		search_type = "instructor";
 		$('#search_query_text').focus().val("");
 	});
-	//교과목번호
+	//학수번호
 	$('#stype_course_number').click(function(){
-		$('#stype_dropdown_label').text("교과목번호");
-		$('#search_query_text').attr('placeholder', "예) 002.005A 001");
+		$('#stype_dropdown_label').text("학수번호");
+		$('#search_query_text').attr('placeholder', "예) D02103301");
 		search_type = "course_number";
 		$('#search_query_text').focus().val("");
 	});
 	//수업교시
 	$('#stype_class_time').click(function(){
 		$('#stype_dropdown_label').text("수업교시");
-		$('#search_query_text').attr('placeholder', "예) 월1,5, 월6, 금");
+		$('#search_query_text').attr('placeholder', "예) 월2, 화6, 금");
 		search_type = "class_time";
 		$('#search_query_text').focus().val("");
 	});
-	//수업교시
+	//개설학과
 	$('#stype_department').click(function(){
 		$('#stype_dropdown_label').text("개설학과");
-		$('#search_query_text').attr('placeholder', "예) 컴공");
+		$('#search_query_text').attr('placeholder', "예) 국통");
 		search_type = "department";
 		$('#search_query_text').focus().val("");
 	});
@@ -803,21 +803,21 @@ function get_filter()
 	if (credit.length > 0)
 		result.credit = credit;
 
-	//학문의 기초
-	var basics = [];
-	$('#filter_basics .label-info').each(function(i){
-		basics.push($(this).attr('value'));
+	//실용외국어
+	var practical_foreign_language = [];
+	$('#filter_practical_foreign_language .label-info').each(function(i){
+		practical_foreign_language.push($(this).attr('value'));
 	});
-	if (basics.length > 0)
-		result.basics = basics;
+	if (practical_foreign_language.length > 0)
+		result.practical_foreign_language = practical_foreign_language;
 
-	//핵심 교양
-	var core = [];
-	$('#filter_core .label-info').each(function(i){
-		core.push($(this).attr('value'));
+	//교양과목
+	var liberal_arts = [];
+	$('#filter_liberal_arts .label-info').each(function(i){
+		liberal_arts.push($(this).attr('value'));
 	});
-	if (core.length > 0)
-		result.core = core;
+	if (liberal_arts.length > 0)
+		result.liberal_arts = liberal_arts;
 
 	//기타
 	var etc = [];
@@ -1142,10 +1142,7 @@ function refresh_my_courses_table()
 		$('<td></td>').addClass('instructor').appendTo(row).text(lecture.instructor);
 		$('<td></td>').addClass('quota').appendTo(row).text(lecture.quota);
 		$('<td></td>').addClass('enrollment').appendTo(row).text(lecture.enrollment);
-		$('<td></td>').addClass('essential-major').appendTo(row).text(lecture.essential_major);
-		$('<td></td>').addClass('team-teahcing').appendTo(row).text(lecture.team_teaching);
-		$('<td></td>').addClass('cyber').appendTo(row).text(lecture.cyber);
-		$('<td></td>').addClass('native').appendTo(row).text(lecture.native);
+		$('<td></td>').addClass('features').appendTo(row).text(s(lecture.essential_major) + " " + s(lecture.team_teaching) + " " + s(lecture.cyber) + " " + s(lecture.native));
 		$('<td></td>').addClass('remark').appendTo(row).text(lecture.remark);
 
 		row.appendTo($('#my_courses_table tbody'));
@@ -1195,10 +1192,12 @@ function set_result_table(data)
 		$('<td></td>').addClass('instructor').appendTo(row).text(lecture.instructor);
 		$('<td></td>').addClass('quota').appendTo(row).text(lecture.quota);
 		$('<td></td>').addClass('enrollment').appendTo(row).text(lecture.enrollment);
-		$('<td></td>').addClass('essential-major').appendTo(row).text(lecture.essential_major);
-		$('<td></td>').addClass('team-teahcing').appendTo(row).text(lecture.team_teaching);
-		$('<td></td>').addClass('cyber').appendTo(row).text(lecture.cyber);
-		$('<td></td>').addClass('native').appendTo(row).text(lecture.native);
+		var features = [];
+		if (lecture.essential_major) features.push(lecture.essential_major);
+		if (lecture.team_teaching) features.push(lecture.team_teaching);
+		if (lecture.cyber) features.push(lecture.cyber);
+		if (lecture.native) features.push(lecture.native);
+		$('<td></td>').addClass('features').appendTo(row).text(features.join(', '));
 		$('<td></td>').addClass('remark').appendTo(row).text(lecture.remark);
 
 		row.appendTo($('#search_result_table tbody'));

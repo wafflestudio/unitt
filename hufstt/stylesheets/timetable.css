@@ -11,7 +11,7 @@ body {padding-top:45px;}
 .search-result-table.table td {vertical-align:middle;font-size:9pt;}
 .search-result-table .sector {width:40px;text-align:center;}
 .search-result-table .classification {width:30px;text-align:center;}
-.search-result-table .department {min-width:40px;max-width:80px;text-align:center;}
+.search-result-table .department {min-width:50px;max-width:80px;text-align:center;}
 .search-result-table .academic-year {width:40px;text-align:center;}
 .search-result-table .course-number {width:65px;text-align:center;}
 .search-result-table .lecture-number {width:30px;text-align:center;}
@@ -22,10 +22,7 @@ body {padding-top:45px;}
 .search-result-table .class-time {width:70px;text-align:center;}
 .search-result-table .instructor {width:60px;text-align:center;}
 .search-result-table .location {width:70px;text-align:center;}
-.search-result-table .essential-major {width:40px;text-align:center;}
-.search-result-table .team-teaching {width:40px;text-align:center;}
-.search-result-table .cyber {width:40px;text-align:center;}
-.search-result-table .native {width:40px;text-align:center;}
+.search-result-table .features {width:60px;text-align:center;}
 .search-result-table th.remark {text-align:center;}
 .search-result-table tbody tr {cursor:pointer;}
 #lectures_content {height:250px;overflow:scroll;overflow-x:hidden;border:1px solid #ccc;}
