@@ -213,7 +213,7 @@ $(function(){
 		}
 	});
 	socket.on('export_timetable_result', function(data){
-		$('#saved_timetable_url').attr('href', '/user/'+data.filename).text("http://snutt.kr/user/"+data.filename);
+		$('#saved_timetable_url').attr('href', '/user/'+data.filename).text("http://hufstt.kr/user/"+data.filename);
 	});
 
 	//SNUTT 로고 클릭
