@@ -11,10 +11,7 @@
 .search-result-table .classification {display:none !important;}
 .search-result-table .remark {display:none !important;}
 .search-result-table .quota {display:none !important;}
-.search-result-table .essential-major {display:none !important;}
-.search-result-table .team-teaching {display:none !important;}
-.search-result-table .cyber {display:none !important;}
-.search-result-table .native {display:none !important;}
+.search-result-table .features {display:none !important;}
 
 .search-result-table th {font-size:8pt !important;line-height:130% !important;}
 .search-result-table td {font-size:8pt !important;line-height:130% !important;}
