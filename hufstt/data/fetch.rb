@@ -396,7 +396,7 @@ def get_department(filename)
 			return "영어통번역학과" if str == "english_translation"
 			return "영어학과" if str == "english"
 			return "외국어로서의한국어교육연계전공" if str == "korean_as_foreign"
-			return "이랍어과" if str == "iranian"
+			return "이란어과" if str == "iranian"
 			return "이탈리아어과" if str == "italian"
 			return "인도어과" if str == "indian"
 			return "일본문학전공" if str == "japanese_literature"
