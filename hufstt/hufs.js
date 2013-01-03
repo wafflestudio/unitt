@@ -62,6 +62,7 @@ function init_data()
 	load_data(2012 ,'1'); //1학기
 	load_data(2012 ,'S'); //여름학기
 	load_data(2012 ,'2'); //2학기
+	load_data(2013 ,'1');
 
 	//timetable_images 폴더가 없으면 생성
 	var stats = fs.stat('timetable_images', function(err, stats){
