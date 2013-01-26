@@ -65,7 +65,7 @@ get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"ALA_H1",:filename
 get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"ALAA1_H1",:filename => "undergraduate_seoul_major_business") #경영학전공(서울)
 get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"AEC_H1",:filename => "undergraduate_seoul_major_economy_department") #경제학부(서울)
 get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"AECA1_H1",:filename => "undergraduate_seoul_major_economy") #경제학전공(서울)
-get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"ACCB1_H1",:filename => "undergraduate_seoul_major_advertisement") #광고.홍보전공(서울)
+get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"ACDB1_H1",:filename => "undergraduate_seoul_major_advertisement") #광고.홍보전공(서울)
 get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"AFF01_H1",:filename => "undergraduate_seoul_major_education") #교육학(서울)
 get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"AZAA1_H1",:filename => "undergraduate_seoul_major_exchange_student") #국제방문 교환학생(서울)
 get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"AEAA1_H1",:filename => "undergraduate_seoul_major_international_trade") #국제통상학과(서울)
