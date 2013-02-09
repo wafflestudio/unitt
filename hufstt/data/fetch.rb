@@ -112,7 +112,7 @@ get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"AIA_H1",:filename
 get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"ANDA2_H1",:filename => "undergraduate_seoul_major_philosophy") #철학과(서울)
 get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"ABE01_H1",:filename => "undergraduate_seoul_major_thai") #태국어과(서울)
 get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"ABH11_H1",:filename => "undergraduate_seoul_major_turkish") #터키.아제르바이잔어과(서울)
-get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"AAG01_H1",:filename => "undergraduate_seoul_major_portuguese") #포르투갈(브라질)어과(서울)
+get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"AAK01_H1",:filename => "undergraduate_seoul_major_portuguese") #포르투갈(브라질)어과(서울)
 get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"AAB01_H1",:filename => "undergraduate_seoul_major_french") #프랑스어과(서울)
 get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"AFB01_H1",:filename => "undergraduate_seoul_major_french_education") #프랑스어교육과(서울)
 get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"AFD01_H1",:filename => "undergraduate_seoul_major_korean_education") #한국어교육과(서울)
