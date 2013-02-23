@@ -79,6 +79,7 @@ get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"ABP01_H1",:filena
 get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"ABC01_H1",:filename => "undergraduate_seoul_major_indonesia") #말레이.인도네시아어과(서울)
 get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"ABJ01_H1",:filename => "undergraduate_seoul_major_mongol") #몽골어과(서울)
 get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"ANDD2_H1",:filename => "undergraduate_seoul_major_contents") #문화콘텐츠학전공(서울)
+get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"ACD_H1",:filename => "undergraduate_seoul_major_media_communication") #미디어커뮤니케이션학부(서울)
 get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"ACCC1_H1",:filename => "undergraduate_seoul_major_broadcasting") #방송.영상전공(서울)
 get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"ADA01_H1",:filename => "undergraduate_seoul_major_law") #법학과(서울)
 get_htm(:sector => "A",:campus => "H1",:gubun => "1",:major =>"ABF01_H1",:filename => "undergraduate_seoul_major_vietnam") #베트남어과(서울)
@@ -379,6 +380,7 @@ def get_department(filename)
 			return "말레이.인도네이사어과" if str == "indonesia"
 			return "몽골어과" if str == "mongol"
 			return "문화콘텐츠학전공" if str == "contents"
+			return "미디어커뮤니케이션학부" if str == "media_communication"
 			return "방송.영상전공" if str == "broadcasting"
 			return "법학과" if str == "law"
 			return "베트남어과" if str == "vietnam"
